@@ -2,24 +2,44 @@
 <html>
 <head>
   <title>My Script Hub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       background-color: #1E90FF; /* blue background */
-      color: white;               /* text color white */
+      color: white;
       font-family: sans-serif;
       text-align: center;
-      padding-top: 100px;
+      padding: 50px 20px; /* some padding for mobile */
     }
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 40px;
+    }
+
     button {
-      padding: 20px 40px;         /* bigger button */
-      font-size: 20px;            /* bigger text */
-      background-color: #FFD700;  /* yellow button for contrast */
+      padding: 20px 60px;       /* big button area for mobile tap */
+      font-size: 22px;          /* readable on small screens */
+      background-color: #FFD700; /* yellow button */
       border: none;
-      border-radius: 10px;
+      border-radius: 12px;
       cursor: pointer;
+      width: 80%;               /* makes button stretch on small screens */
+      max-width: 400px;         /* limits button size on desktop */
     }
+
     button:hover {
-      background-color: #FFC300;  /* hover effect */
+      background-color: #FFC300;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.5em;       /* smaller heading on tiny screens */
+      }
+      button {
+        padding: 18px 40px;     /* slightly smaller on tiny phones */
+        font-size: 20px;
+      }
     }
   </style>
 </head>
